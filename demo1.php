@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,28 +7,60 @@
     <title>PHP DEMO</title>
 </head>
 <body>
+   
+    <?php
+
+
+    if (isset($_GET["error"])){
+    ?>
+        <p style="background-color: red; color:aliceblue"><?php echo $_GET["error"]?></p>  
+    <?php
+    }//echo $_GET["error"];
+    ?>
+       
+
+
+    <?php
+
+
+    if (isset($_GET["success"])){
+    ?>
+    <p style="background-color: green; color:aliceblue"><?php echo $_GET["success"]?></p>  
+    <?php
+    }//echo $_GET["error"];
+    ?>
+
+
     <form action="output.php" method="POST">
         <div>
         <label for = "username">Username</label>
         <input type ="text" name="username" id="username">
         </div>
 
+
         <div>
         <label for = "email">Email</label>
         <input type ="email" name="email" id="email">
         </div>
+
 
         <div>
         <label for = "password">Password</label>
         <input type ="password" name="password" id="password">
         </div>
 
+
+
+
         <div>
         <label for = "confirm-password">Confirm Password</label>
         <input type ="password" name="confirm-password" id="confirm-password">
         </div>
 
-         <div>
+
+
+
+        <div>
         <input type ="submit" value="Register">
         </div>
 
@@ -38,6 +71,3 @@
    
 </body>
 </html>
-
-
-
